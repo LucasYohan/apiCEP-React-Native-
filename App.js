@@ -33,15 +33,34 @@ export default function App() {
                 <View style={styles.containerInput}>
                     <TextInput
                         value={cep}
-                        onChange={setCep}
+                        onChangeText={setCep}
                         placeholder='Digite o CEP'
                         style={styles.inputCep}
                     />
                 </View>
+                <Button title='Enviar' onPress={consumirAPI} color={'orange'} style={styles.btn} />
+                </View>
 
+                {
+                    data && (
+                        <View style={styles.viewArea}>
+                            <Text>CEP: {data.cep}</Text>
+                            <Text>Logradouro: {data.logradouro}</Text>
+                            <Text>Complemento: {data.complemento}</Text>
+                            <Text>CEP: {data.bairro}</Text>
+                            <Text>CEP: {data.localidade}</Text>
+                            <Text>CEP: {data.uf}</Text>
+                            <Text>CEP: {data.ibge}</Text>
+                            <Text>CEP: {data.gia}</Text>
+                            <Text>CEP: {data.ddd}</Text>
+                            <Text>CEP: {data.siafi}</Text>
+                            <Text style={styles.subText}> 1 - Guia de Informação e Apuração do ICMS, ou apenas GIA, é um documento fisca obrigatório.
+                                2 - Sistema Integrado de Administração Financeiro do Governo Feral - SIAFI é um sistema contábil.
 
-                <Button title='Enviar' onPress={consumirAPI} color={'orange'} />
-            </View>
+                            </Text>
+                        </View>
+                    )}
+            
         </ScrollView>
 
     )

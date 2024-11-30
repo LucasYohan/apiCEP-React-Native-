@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
         width: '95%',
         height: 90,
         marginBottom: 50,
-        marginLeft: 10
+        marginLeft: 10,
     },
     logoArea: {
         marginBottom: 50,
@@ -23,15 +23,20 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         padding: 5,
         backgroundColor: '#FFF',
-        maxWidth: '50%',
         borderRadius: 5,
     },
-    containerInput: {
-        justifyContent: "center",
-        flex: 1
+    viewArea: {
+        backGroundColor: 'olive',
+        padding: 15,
+        fontSize: 16,
+    },
+    subText: {
+        fontSize: 14,
+        marginTop: 100
+    },
+    btn: {
+        color: '#000'
     }
-
-
 })
 
 export default styles;
